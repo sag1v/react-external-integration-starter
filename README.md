@@ -3,7 +3,7 @@
 
 It contains 2 projects:  
 
-1) `react-counter` - a simulation of an isolated stand-alone "mini app" or a widget.
+1) `counter-app` - a simulation of an isolated stand-alone "mini app" or a widget.
 2) `main-app` - a simulation of an external application to the react mini-app / widget. 
 
 ## running the projects 
@@ -17,10 +17,10 @@ npm install
 npm start
 ```
 
-### `react-counter`
+### `counter-app`
 
 ```bash
-cd react-counter
+cd counter-app
 npm install
 npm start
 ```
@@ -30,4 +30,4 @@ npm start
 npm run build
 ```
 
-_note: the build proccess of `react-counter` is modified, the output directory is targetting to "/main-app/public/counter_dist"._
+_note: the build proccess of `counter-app` is modified, the output directory is targetting to "/main-app/public/counter_dist"._
