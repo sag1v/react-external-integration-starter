@@ -6,17 +6,14 @@ class Counter extends Component {
   state = { count: this.props.initialCount || 0 }
 
   updateCount = val => () => {
-    const { maxCount, minCount, onCountUpdate } = this.props;
+    const { onCountUpdate } = this.props;
     this.setState(state => {
       const nextCount = state.count + val;
-      if (nextCount <= maxCount && nextCount >= minCount) {
-        return { count: nextCount }
-      }
+      return { count: nextCount }
     },
       () => onCountUpdate(this.state.count)
     );
   }
-
 
   render() {
     const { count } = this.state;
@@ -36,8 +33,6 @@ class Counter extends Component {
 
 Counter.defaultProps = {
   title: "My Counter",
-  maxCount: Infinity,
-  minCount: -Infinity,
   onCountUpdate: () => { }
 };
 
